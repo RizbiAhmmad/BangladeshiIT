@@ -3,6 +3,7 @@ import {
     
   } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout";
+import Home from "../Pages/Home/Home";
 
   export const router = createBrowserRouter([
     {
@@ -11,7 +12,7 @@ import MainLayout from "../Layouts/MainLayout";
       children: [
         {
             path: "/",
-            element: <h1 className='text-red-500'>Home</h1>
+            element: <Home></Home>
         },
         
       ]

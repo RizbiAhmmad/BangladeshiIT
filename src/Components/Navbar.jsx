@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../assets/BangladeshiIT.jpg"; // Adjust path if needed
+import logo from "../assets/BangladeshiIT.jpg";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -18,18 +18,18 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo Image */}
         <div>
-            <a href="/" className="flex items-center">
-                <img
-                src={logo}
-                alt="Logo"
-                className="h-10 w-10 rounded-full mr-2"
-                />
-                <h1 className="text-2xl font-bold flex items-center gap-1">
-          <span className="text-black">Bangladeshi</span>
-          <span className="text-red-600">I</span>
-          <span className="text-green-600">T</span>
-        </h1>
-            </a>
+          <a href="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-10 w-10 rounded-full mr-2"
+            />
+            <h1 className="text-2xl font-bold flex items-center gap-1">
+              <span className="text-black">Bangladeshi</span>
+              <span className="text-red-600">I</span>
+              <span className="text-green-600">T</span>
+            </h1>
+          </a>
         </div>
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8 items-center">
@@ -102,20 +102,19 @@ export default function Navbar() {
 
               {/* Mobile Contact Button */}
               <motion.li
-  variants={{
-    open: { opacity: 1, y: 0 },
-    closed: { opacity: 0, y: -20 },
-  }}
->
-  <a
-    href="#contact"
-    onClick={() => setIsOpen(false)}
-    className="inline-block mt-2 bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition font-semibold"
-  >
-    Contact
-  </a>
-</motion.li>
-
+                variants={{
+                  open: { opacity: 1, y: 0 },
+                  closed: { opacity: 0, y: -20 },
+                }}
+              >
+                <a
+                  href="#contact"
+                  onClick={() => setIsOpen(false)}
+                  className="inline-block mt-2 bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition font-semibold"
+                >
+                  Contact
+                </a>
+              </motion.li>
             </motion.ul>
           </motion.nav>
         )}
