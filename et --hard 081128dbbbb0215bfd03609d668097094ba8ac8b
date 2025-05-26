@@ -1,0 +1,35 @@
+[33mcommit 0835549eb2d3458ce206909a620e9376dcccd378[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Rizbi ahmmad <contact.rizbi123@gmail.com>
+Date:   Mon May 26 22:56:10 2025 +0600
+
+    Adding services
+
+[33mcommit 081128dbbbb0215bfd03609d668097094ba8ac8b[m
+Author: Rizbi ahmmad <contact.rizbi123@gmail.com>
+Date:   Mon May 26 18:14:57 2025 +0600
+
+    Adding banner with video
+
+[33mcommit a14328134b7006a5b144db0bcd33c287a3e51bc7[m
+Author: Rizbi ahmmad <contact.rizbi123@gmail.com>
+Date:   Mon May 26 17:46:26 2025 +0600
+
+    Updating Banner
+
+[33mcommit 804884d64a50ea22ce6698570104e0b5b6e750ce[m
+Author: Rizbi ahmmad <contact.rizbi123@gmail.com>
+Date:   Mon May 26 16:19:16 2025 +0600
+
+    Adding Banner
+
+[33mcommit 534b2be375832908a864119e0c58956b3d4402f2[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Rizbi ahmmad <contact.rizbi123@gmail.com>
+Date:   Sun May 25 22:34:20 2025 +0600
+
+    Adding Navbar
+
+[33mcommit 8621c7165b2219f4f251abcb76d28b762d77fcb5[m
+Author: Rizbi ahmmad <contact.rizbi123@gmail.com>
+Date:   Sun May 25 21:43:19 2025 +0600
+
+    Basic setup with React and TailwindCSS
