@@ -24,7 +24,7 @@ export default function Banner() {
         <div className="w-full md:w-1/2">
           <div className="rounded-2xl shadow-lg overflow-hidden border-4 border-green-600">
             <video
-              src="../../../public/Test Video.mp4" 
+              src="" 
               autoPlay
               loop
               muted
