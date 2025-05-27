@@ -33,7 +33,7 @@ export default function Testimonial() {
     <section className="bg-white py-20 px-6" id="testimonial">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-gray-800 mb-4">
-          Our Happy <span className="text-gradient">Clients Say</span>
+          Our Happy <span className="text-orange-500">Clients Say</span>
         </h2>
         <p className="text-gray-600 max-w-xl mx-auto mb-14">
           Our valued clients share their experiences with Bangladeshi IT,

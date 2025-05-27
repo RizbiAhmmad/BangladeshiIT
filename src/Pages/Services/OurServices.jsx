@@ -50,7 +50,7 @@ export default function OurServices() {
   return (
     <section className="bg-white py-16 px-6" id="services">
       <h2 className="text-4xl font-bold text-center mb-12 text-black">
-        💼 Our Services
+        💼 Our <span className="text-orange-500"> Services</span>
       </h2>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

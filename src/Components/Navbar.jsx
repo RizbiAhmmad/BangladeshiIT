@@ -46,7 +46,7 @@ export default function Navbar() {
           {/* Contact Button with Gap */}
           <a
             href="#contact"
-            className="ml-6 bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition font-semibold"
+            className="ml-6 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition font-semibold"
           >
             Contact
           </a>
@@ -110,7 +110,7 @@ export default function Navbar() {
                 <a
                   href="#contact"
                   onClick={() => setIsOpen(false)}
-                  className="inline-block mt-2 bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition font-semibold"
+                  className="inline-block mt-2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition font-semibold"
                 >
                   Contact
                 </a>
