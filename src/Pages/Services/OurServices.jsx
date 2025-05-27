@@ -48,16 +48,16 @@ const demoServices = [
 
 export default function OurServices() {
   return (
-    <section className="bg-white py-16 px-4" id="services">
+    <section className="bg-white py-16 px-6" id="services">
       <h2 className="text-4xl font-bold text-center mb-12 text-black">
         💼 Our Services
       </h2>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {demoServices.map((service, index) => (
           <motion.div
             key={service.id}
-            className="bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-green-200 transition-all duration-300 transform hover:-translate-y-1"
+            className="bg-white border border-green-400 rounded-3xl overflow-hidden shadow-2xl hover:shadow-green-200 transition-all duration-300 transform hover:-translate-y-1"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
