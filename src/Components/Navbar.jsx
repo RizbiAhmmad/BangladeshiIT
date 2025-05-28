@@ -1,50 +1,40 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { NavLink } from "react-router-dom"; // import NavLink
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import logo from "../assets/BangladeshiIT.jpg";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services", dropdown: true },
-  { name: "Blog", href: "#blog" },
+  { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services", dropdown: true },
+  { name: "Blog", href: "/blog" },
 ];
 
 const services = [
-  { name: "Web Development", href: "#web-dev" },
-  { name: "UI/UX Design", href: "#ui-ux" },
-  { name: "SEO Optimization", href: "#seo" },
-  { name: "Branding", href: "#branding" },
-  { name: "Social Media Marketing", href: "#smm" },
+  { name: "Web Development", href: "/web-dev" },
+  { name: "UI/UX Design", href: "/ui-ux" },
+  { name: "SEO Optimization", href: "/seo" },
+  { name: "Branding", href: "/branding" },
+  { name: "Social Media Marketing", href: "/smm" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const [activeLink, setActiveLink] = useState("/");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const current = window.location.hash || "/";
-      setActiveLink(current);
-    };
-    window.addEventListener("hashchange", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("hashchange", handleScroll);
-  }, []);
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
-        <a href="/" className="flex items-center">
+        <NavLink to="/" className="flex items-center">
           <img src={logo} alt="Logo" className="h-10 w-10 rounded-full mr-2" />
           <h1 className="text-2xl font-bold flex items-center gap-1">
             <span className="text-black">Bangladeshi</span>
             <span className="text-red-600">I</span>
             <span className="text-green-600">T</span>
           </h1>
-        </a>
+        </NavLink>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 items-center relative">
@@ -54,7 +44,7 @@ export default function Navbar() {
                 <div
                   onClick={() => setShowDropdown((prev) => !prev)}
                   className={`cursor-pointer font-medium flex items-center gap-1 ${
-                    activeLink === link.href
+                    window.location.pathname.startsWith(link.href)
                       ? "text-red-600"
                       : "text-black hover:text-green-600"
                   }`}
@@ -76,35 +66,39 @@ export default function Navbar() {
                       className="absolute bg-white shadow-lg mt-2 rounded-md p-3 w-56 z-50"
                     >
                       {services.map((service) => (
-                        <a
+                        <NavLink
                           key={service.name}
-                          href={service.href}
-                          className="block px-3 py-2 text-sm text-gray-700 hover:text-orange-500"
+                          to={service.href}
+                          className={({ isActive }) =>
+                            `block px-3 py-2 text-sm ${
+                              isActive ? "text-orange-500 font-semibold" : "text-gray-700 hover:text-orange-500"
+                            }`
+                          }
                         >
                           {service.name}
-                        </a>
+                        </NavLink>
                       ))}
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
             ) : (
-              <a
+              <NavLink
                 key={link.name}
-                href={link.href}
-                className={`font-medium ${
-                  activeLink === link.href
-                    ? "text-red-600"
-                    : "text-black hover:text-green-600"
-                }`}
+                to={link.href}
+                className={({ isActive }) =>
+                  `font-medium ${
+                    isActive ? "text-red-600" : "text-black hover:text-green-600"
+                  }`
+                }
               >
                 {link.name}
-              </a>
+              </NavLink>
             )
           )}
 
           <a
-            href="#contact"
+            href="contact"
             className="ml-6 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition font-semibold"
           >
             Contact
@@ -165,13 +159,19 @@ export default function Navbar() {
                         >
                           {services.map((service) => (
                             <li key={service.name}>
-                              <a
-                                href={service.href}
+                              <NavLink
+                                to={service.href}
                                 onClick={() => setIsOpen(false)}
-                                className="block text-sm text-gray-700 hover:text-orange-500"
+                                className={({ isActive }) =>
+                                  `block text-sm ${
+                                    isActive
+                                      ? "text-orange-500 font-semibold"
+                                      : "text-gray-700 hover:text-orange-500"
+                                  }`
+                                }
                               >
                                 {service.name}
-                              </a>
+                              </NavLink>
                             </li>
                           ))}
                         </motion.ul>
@@ -186,17 +186,17 @@ export default function Navbar() {
                       closed: { opacity: 0, y: -20 },
                     }}
                   >
-                    <a
-                      href={link.href}
+                    <NavLink
+                      to={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`block font-medium ${
-                        activeLink === link.href
-                          ? "text-red-600"
-                          : "text-black hover:text-green-600"
-                      }`}
+                      className={({ isActive }) =>
+                        `block font-medium ${
+                          isActive ? "text-red-600" : "text-black hover:text-green-600"
+                        }`
+                      }
                     >
                       {link.name}
-                    </a>
+                    </NavLink>
                   </motion.li>
                 )
               )}
@@ -208,7 +208,7 @@ export default function Navbar() {
                 }}
               >
                 <a
-                  href="#contact"
+                  href="contact"
                   onClick={() => setIsOpen(false)}
                   className="inline-block mt-2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition font-semibold"
                 >
