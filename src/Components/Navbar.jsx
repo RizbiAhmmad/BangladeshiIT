@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom"; // import NavLink
+import { NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import logo from "../assets/BangladeshiIT.jpg";
@@ -12,16 +12,20 @@ const navLinks = [
 ];
 
 const services = [
-  { name: "Web Development", href: "/web-dev" },
-  { name: "UI/UX Design", href: "/ui-ux" },
-  { name: "SEO Optimization", href: "/seo" },
-  { name: "Branding", href: "/branding" },
-  { name: "Social Media Marketing", href: "/smm" },
+  { name: "Web Development", href: "/services/web-dev" },
+  { name: "UI/UX Design", href: "/services/ui-ux" },
+  { name: "SEO Optimization", href: "/services/seo" },
+  { name: "Branding", href: "/services/branding" },
+  { name: "Social Media Marketing", href: "/services/smm" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const location = useLocation();
+
+  // Helper to detect if current route is under services
+  const isServiceRoute = location.pathname.startsWith("/services");
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
@@ -44,16 +48,12 @@ export default function Navbar() {
                 <div
                   onClick={() => setShowDropdown((prev) => !prev)}
                   className={`cursor-pointer font-medium flex items-center gap-1 ${
-                    window.location.pathname.startsWith(link.href)
-                      ? "text-red-600"
-                      : "text-black hover:text-green-600"
+                    isServiceRoute ? "text-red-600" : "text-black hover:text-green-600"
                   }`}
                 >
                   {link.name}
                   <FiChevronDown
-                    className={`transition-transform ${
-                      showDropdown ? "rotate-180" : "rotate-0"
-                    }`}
+                    className={`transition-transform ${showDropdown ? "rotate-180" : "rotate-0"}`}
                   />
                 </div>
 
@@ -69,9 +69,12 @@ export default function Navbar() {
                         <NavLink
                           key={service.name}
                           to={service.href}
+                          onClick={() => setShowDropdown(false)} // ✅ close dropdown
                           className={({ isActive }) =>
                             `block px-3 py-2 text-sm ${
-                              isActive ? "text-orange-500 font-semibold" : "text-gray-700 hover:text-orange-500"
+                              isActive
+                                ? "text-orange-500 font-semibold"
+                                : "text-gray-700 hover:text-orange-500"
                             }`
                           }
                         >
@@ -96,9 +99,8 @@ export default function Navbar() {
               </NavLink>
             )
           )}
-
           <a
-            href="contact"
+            href="/contact"
             className="ml-6 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition font-semibold"
           >
             Contact
@@ -161,7 +163,10 @@ export default function Navbar() {
                             <li key={service.name}>
                               <NavLink
                                 to={service.href}
-                                onClick={() => setIsOpen(false)}
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setShowDropdown(false);
+                                }}
                                 className={({ isActive }) =>
                                   `block text-sm ${
                                     isActive
@@ -208,7 +213,7 @@ export default function Navbar() {
                 }}
               >
                 <a
-                  href="contact"
+                  href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="inline-block mt-2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition font-semibold"
                 >

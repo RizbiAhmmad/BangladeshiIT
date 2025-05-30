@@ -70,7 +70,7 @@ const WebDevelopment = () => {
         <h2 className="text-3xl font-bold text-orange-500 uppercase tracking-wide">
           Web Development Services
         </h2>
-        <h3 className="text-4xl md:text-5xl font-extrabold text-blue-700 mt-2">
+        <h3 className="text-4xl md:text-4xl font-extrabold text-blue-700 mt-2">
           CHOOSE YOUR PLAN
         </h3>
       </div>

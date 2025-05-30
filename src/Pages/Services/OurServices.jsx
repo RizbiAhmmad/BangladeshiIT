@@ -1,84 +1,101 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const demoServices = [
   {
     id: 1,
-    title: "Digital Marketing",
-    description:
-      "Reach your audience and grow your brand with powerful marketing strategies.",
-    image: "https://static.vecteezy.com/system/resources/previews/005/732/506/non_2x/man-hand-holding-smart-phone-digital-marketing-word-with-icon-business-virtual-screen-free-photo.jpg",
+    title: "E-commerce Solution",
+    link: "/services/ecommerce",
+    description: "Launch your online store with secure, scalable, and user-friendly e-commerce solutions.",
+    image: "https://dskglobalsolutions.com/wp-content/uploads/2024/03/Ecom.webp",
   },
   {
     id: 2,
     title: "Web Development",
-    description:
-      "Fast, responsive websites built with cutting-edge technologies and design.",
+    link: "/services/web-dev",
+    description: "Fast, responsive websites built with cutting-edge technologies and user experience in mind.",
     image: "https://5.imimg.com/data5/SELLER/Default/2023/8/332112112/KO/OT/LM/2672556/web-development-programming-resized.jpg",
   },
   {
     id: 3,
-    title: "Graphics Designing",
-    description:
-      "Creative visual content for social media, branding, and business promotion.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT49FUKA3yasjKTGrszq9058w1i1oKQ8znw7g&s",
+    title: "Apps Development",
+    link: "/services/apps-development",
+    description: "Powerful mobile apps for Android & iOS tailored to your business needs.",
+    image: "https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg",
   },
   {
     id: 4,
-    title: "Social Media Marketing",
-    description:
-      "Boost engagement and build your brand across popular social media platforms.",
-    image: "https://bongiyo.com/public/medies/Feb_2025/1738609696.67a114207ee6a.png",
+    title: "Digital Marketing",
+    link: "/services/digital-marketing",
+    description: "Grow your brand reach with targeted ads, email marketing, and online campaigns.",
+    image: "https://static.vecteezy.com/system/resources/previews/005/732/506/non_2x/man-hand-holding-smart-phone-digital-marketing-word-with-icon-business-virtual-screen-free-photo.jpg",
   },
   {
     id: 5,
-    title: "SEO / Content Writing",
-    description:
-      "Rank higher on Google and attract traffic with optimized content and SEO.",
-    image: "https://www.emproit.com/newimages/content-writing.png",
+    title: "Graphic Design",
+    link: "/services/graphic-design",
+    description: "Eye-catching designs for branding, social media, packaging, and more.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT49FUKA3yasjKTGrszq9058w1i1oKQ8znw7g&s",
   },
   {
     id: 6,
-    title: "Apps Development",
-    description:
-      "Build powerful mobile applications for Android and iOS tailored to your needs.",
-    image: "https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg",
+    title: "Social Media Marketing",
+    link: "/services/social-media-marketing",
+    description: "Boost visibility and connect with your audience across all major platforms.",
+    image: "https://bongiyo.com/public/medies/Feb_2025/1738609696.67a114207ee6a.png",
+  },
+  {
+    id: 7,
+    title: "SEO Content Writing",
+    link: "/services/seo",
+    description: "Improve your search rankings and drive traffic with proven SEO techniques.",
+    image: "https://www.emproit.com/newimages/content-writing.png",
+  },
+  {
+    id: 8,
+    title: "Consulting",
+    link: "/services/consulting",
+    description: "Get expert advice and strategic guidance to grow and transform your business.",
+    image: "https://img.freepik.com/free-photo/business-people-shaking-hands-finishing-up-meeting_1098-20059.jpg",
   },
 ];
 
 export default function OurServices() {
+  const navigate = useNavigate();
+
   return (
-    <section className="bg-white py-16 px-6" id="services">
-      <h2 className="text-4xl font-bold text-center mb-12 text-black">
-        💼 Our <span className="text-orange-500"> Services</span>
+    <section className="w-full px-6 py-16 bg-white text-black" id="services">
+      <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+        💼 Our <span className="text-orange-500">Services</span>
       </h2>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {demoServices.map((service, index) => (
           <motion.div
             key={service.id}
-            className="bg-white border border-green-400 rounded-3xl overflow-hidden shadow-2xl hover:shadow-green-200 transition-all duration-300 transform hover:-translate-y-1"
-            initial={{ opacity: 0, y: 30 }}
+            className="rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05 }}
           >
             <img
               src={service.image}
               alt={service.title}
-              className="w-full p-2 rounded-3xl h-52 object-cover"
+              className="w-full h-56 object-cover"
             />
-            <div className="p-6 flex flex-col justify-between h-[250px]">
-              <h3 className="text-2xl font-extrabold text-black mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-sm mb-6">
-                {service.description}
-              </p>
-              <div className="flex justify-center">
-                <button className="bg-gradient-to-r from-green-600 to-red-600 hover:from-red-600 hover:to-green-700 text-white px-6 py-2 rounded-full font-semibold transition duration-300">
-                  Learn More
-                </button>
-              </div>
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+              <p className="text-sm text-gray-200 line-clamp-2">{service.description}</p>
+
+              <motion.button
+                onClick={() => navigate(service.link)}
+                className="w-full mt-5 py-3 rounded-lg font-semibold bg-white text-blue-600 hover:bg-gray-200 transition duration-300"
+                whileTap={{ scale: 0.95 }}
+              >
+                Learn More 🚀
+              </motion.button>
             </div>
           </motion.div>
         ))}
