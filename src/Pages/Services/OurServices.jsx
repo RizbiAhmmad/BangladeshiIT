@@ -65,7 +65,7 @@ export default function OurServices() {
   const navigate = useNavigate();
 
   return (
-    <section className="w-full px-6 py-16 bg-white text-black" id="services">
+    <section className="w-full px-6 py-12 bg-white text-black" id="services">
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
         💼 Our <span className="text-orange-500">Services</span>
       </h2>

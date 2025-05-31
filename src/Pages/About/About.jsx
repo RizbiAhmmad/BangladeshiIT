@@ -5,7 +5,6 @@ export default function About() {
   return (
     <section className="bg-white text-gray-800 py-20 px-4">
       <div className="max-w-7xl mx-auto space-y-20">
-
         {/* Hero Section */}
         <motion.div
           className="text-center"
@@ -13,11 +12,16 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-green-600 mb-4">
-            About Bangladeshi<span className="text-red-600">IT</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-green-600 mb-6">
+            About <span className="text-green-600">Bangla</span>
+            <span className="text-red-600">deshi</span>
+            <span className="text-green-600 ml-3">IT</span>
           </h1>
+
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We're a modern tech company empowering Bangladeshi businesses through innovation in web development, branding, and digital marketing.
+            We're a modern tech company empowering Bangladeshi businesses
+            through innovation in web development, branding, and digital
+            marketing.
           </p>
         </motion.div>
 
@@ -32,7 +36,8 @@ export default function About() {
             <FaRocket className="text-4xl text-green-600 mb-4 mx-auto" />
             <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
             <p className="text-gray-600">
-              To fuel Bangladesh's digital revolution by delivering cutting-edge IT solutions with passion, precision, and integrity.
+              To fuel Bangladesh's digital revolution by delivering cutting-edge
+              IT solutions with passion, precision, and integrity.
             </p>
           </motion.div>
 
@@ -45,7 +50,8 @@ export default function About() {
             <FaBullseye className="text-4xl text-red-600 mb-4 mx-auto" />
             <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
             <p className="text-gray-600">
-              To become the most trusted name in Bangladesh’s tech landscape, enabling small to large enterprises to thrive in the digital age.
+              To become the most trusted name in Bangladesh’s tech landscape,
+              enabling small to large enterprises to thrive in the digital age.
             </p>
           </motion.div>
 
@@ -58,7 +64,9 @@ export default function About() {
             <FaUsers className="text-4xl text-orange-500 mb-4 mx-auto" />
             <h3 className="text-xl font-semibold mb-2">Why Us</h3>
             <p className="text-gray-600">
-              We blend creativity with technology to deliver personalized digital solutions that drive results and build lasting relationships.
+              We blend creativity with technology to deliver personalized
+              digital solutions that drive results and build lasting
+              relationships.
             </p>
           </motion.div>
         </div>
@@ -74,10 +82,13 @@ export default function About() {
             Who We Are
           </h2>
           <p className="text-gray-700 text-center max-w-4xl mx-auto">
-            BangladeshiIT is a passionate team of developers, designers, and digital experts committed to delivering exceptional results. We specialize in responsive web design, full-stack development, branding, and marketing strategies tailored for startups and enterprises across Bangladesh.
+            BangladeshiIT is a passionate team of developers, designers, and
+            digital experts committed to delivering exceptional results. We
+            specialize in responsive web design, full-stack development,
+            branding, and marketing strategies tailored for startups and
+            enterprises across Bangladesh.
           </p>
         </motion.div>
-
       </div>
     </section>
   );

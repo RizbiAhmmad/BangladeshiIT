@@ -51,7 +51,7 @@ export default function Contact() {
                 <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8" />
                 <path d="M21 8v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8" />
               </svg>
-              <span>contact@bangladeshiit.com</span>
+              <span>Info@bangladeshiit.com</span>
             </div>
             <div className="flex items-center space-x-3">
               <svg
@@ -66,7 +66,7 @@ export default function Contact() {
                 <path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72 12.15 12.15 0 005.67 5.67A2 2 0 0120 11v3z" />
                 <path d="M16 7a4 4 0 01-8 0" />
               </svg>
-              <span>+880 1234 567890</span>
+              <span>+880 1621 741799</span>
             </div>
             <div className="flex items-center space-x-3">
               <svg
@@ -80,7 +80,9 @@ export default function Contact() {
               >
                 <path d="M3 10h18M3 14h18M8 18h8M12 6h0" />
               </svg>
-              <span>123, Dhaka, Bangladesh</span>
+              <span>
+                House#35, Road#15, Sector#14, Uttara, Dhaka-1230, Bangladesh
+              </span>
             </div>
           </div>
         </div>

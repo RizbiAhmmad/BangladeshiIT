@@ -33,10 +33,12 @@ export default function Navbar() {
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
           <img src={logo} alt="Logo" className="h-10 w-10 rounded-full mr-2" />
-          <h1 className="text-2xl font-bold flex items-center gap-1">
-            <span className="text-black">Bangladeshi</span>
-            <span className="text-red-600">I</span>
-            <span className="text-green-600">T</span>
+          <h1 className="text-2xl font-bold flex items-center">
+            <span className="flex">
+              <span className="text-green-600">Bangla</span>
+              <span className="text-red-600">deshi</span>
+            </span>
+            <span className="text-green-600 ml-3">IT</span>
           </h1>
         </NavLink>
 
@@ -48,12 +50,16 @@ export default function Navbar() {
                 <div
                   onClick={() => setShowDropdown((prev) => !prev)}
                   className={`cursor-pointer font-medium flex items-center gap-1 ${
-                    isServiceRoute ? "text-red-600" : "text-black hover:text-green-600"
+                    isServiceRoute
+                      ? "text-red-600"
+                      : "text-black hover:text-green-600"
                   }`}
                 >
                   {link.name}
                   <FiChevronDown
-                    className={`transition-transform ${showDropdown ? "rotate-180" : "rotate-0"}`}
+                    className={`transition-transform ${
+                      showDropdown ? "rotate-180" : "rotate-0"
+                    }`}
                   />
                 </div>
 
@@ -91,7 +97,9 @@ export default function Navbar() {
                 to={link.href}
                 className={({ isActive }) =>
                   `font-medium ${
-                    isActive ? "text-red-600" : "text-black hover:text-green-600"
+                    isActive
+                      ? "text-red-600"
+                      : "text-black hover:text-green-600"
                   }`
                 }
               >
@@ -196,7 +204,9 @@ export default function Navbar() {
                       onClick={() => setIsOpen(false)}
                       className={({ isActive }) =>
                         `block font-medium ${
-                          isActive ? "text-red-600" : "text-black hover:text-green-600"
+                          isActive
+                            ? "text-red-600"
+                            : "text-black hover:text-green-600"
                         }`
                       }
                     >
