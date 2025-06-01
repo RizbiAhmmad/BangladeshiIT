@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const blogs = [
@@ -8,8 +7,7 @@ const blogs = [
     title: "Why Every Business Needs a Google Business Profile",
     excerpt:
       "Now, having an online presence is no longer optional. Google Business boosts visibility.",
-    image:
-      "https://st2.depositphotos.com/3591429/12244/i/450/depositphotos_122442772-stock-photo-people-with-digital-gadgets.jpg",
+    image: "https://st2.depositphotos.com/3591429/12244/i/450/depositphotos_122442772-stock-photo-people-with-digital-gadgets.jpg",
     tag: "Best SEO service in Bangladesh",
     link: "#",
   },
@@ -18,8 +16,7 @@ const blogs = [
     title: "Which Should You Start with First: Sales or Branding?",
     excerpt:
       "When launching a new business or scaling an existing one, this is the million-dollar question.",
-    image:
-      "https://st2.depositphotos.com/3591429/12244/i/450/depositphotos_122442772-stock-photo-people-with-digital-gadgets.jpg",
+    image: "https://st2.depositphotos.com/3591429/12244/i/450/depositphotos_122442772-stock-photo-people-with-digital-gadgets.jpg",
     tag: "Best Social Media Marketing Service in Bangladesh",
     link: "#",
   },
@@ -28,18 +25,69 @@ const blogs = [
     title: "The Importance of UI/UX Design in Website Development",
     excerpt:
       "In today’s digital-first world, a well-designed website can make or break your brand.",
-    image:
-      "https://st2.depositphotos.com/3591429/12244/i/450/depositphotos_122442772-stock-photo-people-with-digital-gadgets.jpg",
+    image: "https://st2.depositphotos.com/3591429/12244/i/450/depositphotos_122442772-stock-photo-people-with-digital-gadgets.jpg",
     tag: "Best Website Design Service in Bangladesh",
+    link: "#",
+  },
+  {
+    id: 4,
+    title: "Top 5 Strategies for SEO Success in 2025",
+    excerpt:
+      "Want to rank higher on Google? These proven SEO techniques can drive results fast.",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    tag: "SEO Optimization Tips",
+    link: "#",
+  },
+  {
+    id: 5,
+    title: "How Social Media Ads Can Skyrocket Your Business",
+    excerpt:
+      "Social platforms aren’t just for selfies. They're powerful tools for business growth.",
+    image: "https://wittysparks.com/wp-content/uploads/2019/08/facebook-marketing.jpg",
+    tag: "Facebook Ads Marketing",
+    link: "#",
+  },
+  {
+    id: 6,
+    title: "Key Web Design Trends to Watch This Year",
+    excerpt:
+      "From minimalism to micro-interactions, here's what’s shaping web design in 2025.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    tag: "Modern Web Design",
+    link: "#",
+  },
+  {
+    id: 7,
+    title: "Why Branding Is More Than Just a Logo",
+    excerpt:
+      "Your brand is your promise to your customer. Learn how to craft a lasting impression.",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    tag: "Brand Identity Building",
+    link: "#",
+  },
+  {
+    id: 8,
+    title: "How to Turn Website Visitors into Paying Customers",
+    excerpt:
+      "Learn conversion hacks and UX strategies to transform traffic into revenue.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaTnfERcyTDERkYVNx0w-qK5zrE8VgrRuQBA&s",
+    tag: "Conversion Rate Optimization",
+    link: "#",
+  },
+  {
+    id: 9,
+    title: "Mastering Local SEO for Small Businesses",
+    excerpt:
+      "Dominate your local market by leveraging the power of geo-targeted SEO strategies.",
+    image: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980",
+    tag: "Local SEO Tips",
     link: "#",
   },
 ];
 
-export default function Blog() {
-  const navigate = useNavigate();
-
+export default function Blogs() {
   return (
-    <section className="bg-white py-12 px-6" id="blogs">
+    <section className="bg-white py-16 px-6" id="blogs">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-gray-800 mb-4">
           Our <span className="text-orange-500">Blogs</span>
@@ -81,15 +129,7 @@ export default function Blog() {
             </div>
           ))}
         </div>
-
-        <div className="mt-10">
-          <button
-            onClick={() => navigate("/blogs")}
-            className="bg-orange-500 hover:bg-orange-600 text-white text-sm px-6 py-2 rounded-full font-medium transition"
-          >
-            See All
-          </button>
-        </div>
+        
       </div>
     </section>
   );

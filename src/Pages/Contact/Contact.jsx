@@ -27,7 +27,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
-      <div className="max-w-4xl w-full bg-white rounded-xl shadow-xl p-8 md:flex md:space-x-8">
+      <div className="max-w-4xl w-full bg-white border border-green-500 rounded-xl shadow-xl p-8 md:flex md:space-x-8">
         {/* Contact Info */}
         <div className="md:w-1/2 mb-10 md:mb-0 flex flex-col justify-center">
           <h2 className="text-4xl font-extrabold text-green-700 mb-4">

@@ -7,7 +7,7 @@ import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import WebDevelopment from "../Pages/Services/WebDevelopment";
-import Blog from "../Pages/Home/Blog";
+import Blogs from "../Pages/Blogs/Blogs";
 
   export const router = createBrowserRouter([
     {
@@ -31,8 +31,8 @@ import Blog from "../Pages/Home/Blog";
           element: <WebDevelopment></WebDevelopment>
         },
         {
-          path: "/blog",
-          element: <Blog></Blog>
+          path: "/blogs",
+          element: <Blogs></Blogs>
         }
 
       ]

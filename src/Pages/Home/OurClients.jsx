@@ -1,12 +1,36 @@
 import React, { useEffect, useState } from "react";
 
 const clients = [
-  { id: 1, name: "R", logo: "https://i.ibb.co/42b64jG/client1.png" },
-  { id: 2, name: "Trendy Dhaka", logo: "https://i.ibb.co/XpvksF2/client2.png" },
-  { id: 3, name: "7 Star Gallery", logo: "https://i.ibb.co/xhhDQct/client3.png" },
-  { id: 4, name: "Razzak Fashion", logo: "https://i.ibb.co/PzYW7JH/client4.png" },
-  { id: 5, name: "Aven Apparels", logo: "https://i.ibb.co/vcw0sLt/client5.png" },
-  { id: 6, name: "FarmyCart", logo: "https://i.ibb.co/3YrYFbn/client6.png" },
+  {
+    id: 1,
+    name: "R",
+    logo: "https://www.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1768126784.jpg",
+  },
+  {
+    id: 2,
+    name: "Trendy Dhaka",
+    logo: "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
+  },
+  {
+    id: 3,
+    name: "7 Star Gallery",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfh1Obtj_zkHj4ZsQoAXxHy4SLwYgVDcsBmA&s",
+  },
+  {
+    id: 4,
+    name: "Razzak Fashion",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLA994hpL3PMmq0scCuWOu0LGsjef49dyXVg&s",
+  },
+  {
+    id: 5,
+    name: "Aven Apparels",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFHvhFFIj95nnFuJupvcWl7BhYhxQNk9fBXDN91umcPg-yyiiVqH5PGU&s",
+  },
+  {
+    id: 6,
+    name: "FarmyCart",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeIbzeEtpIKNt8ZMA11KuJnZN7ONgeEDK35A&s",
+  },
 ];
 
 export default function OurClients() {
@@ -52,7 +76,8 @@ export default function OurClients() {
           Our <span className="text-orange-500">Clients</span>
         </h2>
         <p className="text-gray-600 mt-4 max-w-xl mx-auto">
-          Dive into a gallery of impactful collaborations with our valued clients at Bangladeshi IT Solutions.
+          Dive into a gallery of impactful collaborations with our valued
+          clients at Bangladeshi IT Solutions.
         </p>
       </div>
 
@@ -61,10 +86,10 @@ export default function OurClients() {
           {getVisibleClients().map((client) => (
             <div
               key={client.id}
-              className="bg-white border hover:shadow-lg transition-all duration-300 flex items-center justify-center p-4 rounded-xl shrink-0"
+              className="bg-white border border-orange-500 hover:shadow-lg transition-all duration-300 flex items-center justify-center p-4 rounded-xl shrink-0"
               style={{ width: getCardWidth() }}
             >
-              <div className="w-20 h-20 rounded-full overflow-hidden flex items-center justify-center bg-gray-100">
+              <div className="w-20 h-20 rounded-lg overflow-hidden flex items-center justify-center bg-gray-100">
                 <img
                   src={client.logo}
                   alt={client.name}

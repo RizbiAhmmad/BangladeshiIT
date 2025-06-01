@@ -36,7 +36,7 @@ export default function Banner() {
           </motion.p>
 
           <motion.a
-            href="#contact"
+            href="/contact"
             className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
