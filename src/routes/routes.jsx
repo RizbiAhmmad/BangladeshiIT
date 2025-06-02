@@ -9,6 +9,7 @@ import Contact from "../Pages/Contact/Contact";
 import WebDevelopment from "../Pages/Services/WebDevelopment";
 import Blogs from "../Pages/Blogs/Blogs";
 import EcommerceSolutions from "../Pages/Services/EcommerceSolutions";
+import AppsDevelopment from "../Pages/Services/AppsDevelopment";
 
   export const router = createBrowserRouter([
     {
@@ -28,12 +29,16 @@ import EcommerceSolutions from "../Pages/Services/EcommerceSolutions";
           element: <Contact></Contact>
         },
         {
-          path: "services/web-dev",
+          path: "services/web-development",
           element: <WebDevelopment></WebDevelopment>
         },
         {
           path: "services/ecommerce",
           element: <EcommerceSolutions></EcommerceSolutions>
+        },
+        {
+          path: "services/apps-development",
+          element: <AppsDevelopment></AppsDevelopment>
         },
         {
           path: "/blogs",

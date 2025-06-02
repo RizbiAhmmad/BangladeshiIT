@@ -13,7 +13,7 @@ const demoServices = [
   {
     id: 2,
     title: "Web Development",
-    link: "/services/web-dev",
+    link: "/services/web-development",
     description: "Fast, responsive websites built with cutting-edge technologies and user experience in mind.",
     image: "https://5.imimg.com/data5/SELLER/Default/2023/8/332112112/KO/OT/LM/2672556/web-development-programming-resized.jpg",
   },
