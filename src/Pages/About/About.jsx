@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaRocket, FaUsers, FaBullseye } from "react-icons/fa";
+import { MeetTheTeam } from "./MeetTheTeam";
 
 export default function About() {
   return (
@@ -73,6 +74,8 @@ export default function About() {
             </p>
           </motion.div>
         </div>
+
+        <MeetTheTeam></MeetTheTeam>
 
         {/* Top CTA Section */}
         <div className="grid md:grid-cols-2 gap-10 items-center">

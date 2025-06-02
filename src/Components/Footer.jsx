@@ -13,9 +13,13 @@ export default function Footer() {
               alt="BangladeshiIT Logo"
               className="h-10 w-auto"
             />
-            <h2 className="text-2xl font-bold text-orange-500">
-              Bangladeshi<span className="text-white">IT</span>
-            </h2>
+            <h1 className="text-2xl font-bold flex items-center">
+            <span className="flex">
+              <span className="text-green-600">Bangla</span>
+              <span className="text-red-600">deshi</span>
+            </span>
+            <span className="text-green-600 ml-3">IT</span>
+          </h1>
           </div>
           <p className="text-gray-400">
             Empowering businesses with modern digital solutions. We specialize in web development, branding, and marketing services.
@@ -56,13 +60,13 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
           <ul className="space-y-3 text-gray-400 text-sm">
             <li className="flex items-center gap-2">
-              <FaPhone /> +880 1234-567890
+              <FaPhone /> +8801621741799
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope /> info@bangladeshiit.com
+              <FaEnvelope /> Info@bangladeshiit.com
             </li>
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt /> Dhaka, Bangladesh
+              <FaMapMarkerAlt /> House#35, Road#15, Sector#14, Uttara, Dhaka-1230, Bangladesh
             </li>
           </ul>
         </div>

@@ -50,7 +50,7 @@ export default function OurClients() {
   useEffect(() => {
     const interval = setInterval(() => {
       setVisibleStart((prev) => (prev + 1) % clients.length);
-    }, 2500);
+    }, 3000);
     return () => clearInterval(interval);
   }, [clients.length]);
 
@@ -64,7 +64,7 @@ export default function OurClients() {
 
   // Calculate dynamic width string
   const getCardWidth = () => {
-    const gapPx = 16; // tailwind gap-4 = 1rem = 16px
+    const gapPx = 16; 
     const totalGap = gapPx * (visibleCount - 1);
     return `calc((100% - ${totalGap}px) / ${visibleCount})`;
   };
@@ -89,7 +89,7 @@ export default function OurClients() {
               className="bg-white border border-orange-500 hover:shadow-lg transition-all duration-300 flex items-center justify-center p-4 rounded-xl shrink-0"
               style={{ width: getCardWidth() }}
             >
-              <div className="w-20 h-20 rounded-lg overflow-hidden flex items-center justify-center bg-gray-100">
+              <div className="w-30 h-20 rounded-lg overflow-hidden flex items-center justify-center bg-gray-100">
                 <img
                   src={client.logo}
                   alt={client.name}
