@@ -15,6 +15,7 @@ const services = [
   { name: "E-Commerce Solutions", href: "/services/ecommerce" },
   { name: "Web Development", href: "/services/web-development" },
   { name: "Apps Development", href: "/services/apps-development" },
+  { name: "Digital Marketing", href: "/services/digital-marketing" },
   { name: "UI/UX Design", href: "/services/ui-ux" },
   { name: "SEO Optimization", href: "/services/seo" },
   { name: "Branding", href: "/services/branding" },
