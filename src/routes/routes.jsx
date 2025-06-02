@@ -8,6 +8,7 @@ import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import WebDevelopment from "../Pages/Services/WebDevelopment";
 import Blogs from "../Pages/Blogs/Blogs";
+import EcommerceSolutions from "../Pages/Services/EcommerceSolutions";
 
   export const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ import Blogs from "../Pages/Blogs/Blogs";
         {
           path: "services/web-dev",
           element: <WebDevelopment></WebDevelopment>
+        },
+        {
+          path: "services/ecommerce",
+          element: <EcommerceSolutions></EcommerceSolutions>
         },
         {
           path: "/blogs",

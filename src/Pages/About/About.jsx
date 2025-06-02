@@ -12,16 +12,13 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
-            Empowering Bangladesh Through <br />
-            <span className="bg-gradient-to-r from-indigo-500 via-cyan-500 to-blue-500 bg-clip-text text-transparent">
-              Innovation & Digital Excellence
-            </span>
-          </h2>
-          {/* <p className="mt-4 text-lg text-gray-600">
+         <h2 className="text-4xl font-extrabold text-gray-800 mb-4">
+          About <span className="text-orange-500">Bangladeshi IT</span>
+        </h2>
+          <p className="mt-4 text-lg text-gray-600">
             Discover who we are, what drives us, and why businesses trust
             BangladeshiIT for their digital journey.
-          </p> */}
+          </p>
         </motion.div>
 
         {/* Mission, Vision, Why Us */}

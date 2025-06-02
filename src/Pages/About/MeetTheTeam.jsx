@@ -53,7 +53,7 @@ export function MeetTheTeam() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Meet the <span className="text-cyan-600">team</span>
+        Meet the <span className="text-orange-500">team</span>
       </motion.h2>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10 px-6">
