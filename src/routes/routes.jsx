@@ -13,6 +13,7 @@ import AppsDevelopment from "../Pages/Services/AppsDevelopment";
 import DigitalMarketing from "../Pages/Services/DigitalMarketing";
 import GraphicsDesign from "../Pages/Services/GraphicsDesign";
 import SocialMediaMarketing from "../Pages/Services/SocialMediaMarketing";
+import SEOContentWriting from "../Pages/Services/SeoContentWriting";
 
   export const router = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ import SocialMediaMarketing from "../Pages/Services/SocialMediaMarketing";
         {
           path: "services/social-media-marketing",
           element: <SocialMediaMarketing></SocialMediaMarketing>
+        },
+        {
+          path: "services/seo",
+          element: <SEOContentWriting></SEOContentWriting>
         },
         {
           path: "/blogs",
