@@ -17,6 +17,9 @@ const services = [
   { name: "Apps Development", href: "/services/apps-development" },
   { name: "Digital Marketing", href: "/services/digital-marketing" },
   { name: "Graphics Design", href: "/services/graphic-design" },
+  { name: "Social Media Marketing", href: "/services/social-media-marketing" },
+  { name: "SEO Content Writing", href: "/services/seo" },
+  { name: "Consulting", href: "/services/consulting" },
  
 ];
 
