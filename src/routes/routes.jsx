@@ -11,6 +11,7 @@ import Blogs from "../Pages/Blogs/Blogs";
 import EcommerceSolutions from "../Pages/Services/EcommerceSolutions";
 import AppsDevelopment from "../Pages/Services/AppsDevelopment";
 import DigitalMarketing from "../Pages/Services/DigitalMarketing";
+import GraphicsDesign from "../Pages/Services/GraphicsDesign";
 
   export const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ import DigitalMarketing from "../Pages/Services/DigitalMarketing";
         {
           path: "services/digital-marketing",
           element: <DigitalMarketing></DigitalMarketing>
+        },
+        {
+          path: "services/graphic-design",
+          element: <GraphicsDesign></GraphicsDesign>
         },
         {
           path: "/blogs",
