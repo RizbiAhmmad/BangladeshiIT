@@ -79,7 +79,7 @@ export default function Navbar() {
                         <NavLink
                           key={service.name}
                           to={service.href}
-                          onClick={() => setShowDropdown(false)} // ✅ close dropdown
+                          onClick={() => setShowDropdown(false)} 
                           className={({ isActive }) =>
                             `block px-3 py-2 text-sm ${
                               isActive

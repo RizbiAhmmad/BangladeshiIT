@@ -14,6 +14,7 @@ import DigitalMarketing from "../Pages/Services/DigitalMarketing";
 import GraphicsDesign from "../Pages/Services/GraphicsDesign";
 import SocialMediaMarketing from "../Pages/Services/SocialMediaMarketing";
 import SEOContentWriting from "../Pages/Services/SeoContentWriting";
+import ConsultingServices from "../Pages/Services/ConsultingServices";
 
   export const router = createBrowserRouter([
     {
@@ -59,6 +60,10 @@ import SEOContentWriting from "../Pages/Services/SeoContentWriting";
         {
           path: "services/seo",
           element: <SEOContentWriting></SEOContentWriting>
+        },
+        {
+          path: "services/consulting",
+          element: <ConsultingServices></ConsultingServices>
         },
         {
           path: "/blogs",
