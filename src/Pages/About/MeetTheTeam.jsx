@@ -56,6 +56,7 @@ export function MeetTheTeam() {
         Meet the <span className="text-orange-500">team</span>
       </motion.h2>
 
+
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10 px-6">
         {teamMembers.map((member, i) => (
           <motion.div

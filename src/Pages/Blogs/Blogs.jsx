@@ -97,6 +97,7 @@ export default function Blogs() {
           enthusiasts alike. Stay informed, stay inspired.
         </p>
 
+
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogs.map(({ id, title, excerpt, image, tag, link }) => (
             <div
