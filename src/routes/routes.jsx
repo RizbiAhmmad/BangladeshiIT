@@ -15,11 +15,14 @@ import GraphicsDesign from "../Pages/Services/GraphicsDesign";
 import SocialMediaMarketing from "../Pages/Services/SocialMediaMarketing";
 import SEOContentWriting from "../Pages/Services/SeoContentWriting";
 import ConsultingServices from "../Pages/Services/ConsultingServices";
+import OurServices from "../Pages/Services/OurServices";
+import ErrorPage from "../Components/ErrorPage";
 
   export const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement: <ErrorPage />,
       children: [
         {
             path: "/",
@@ -68,6 +71,10 @@ import ConsultingServices from "../Pages/Services/ConsultingServices";
         {
           path: "/blogs",
           element: <Blogs></Blogs>
+        },
+        {
+          path: "/services",
+          element: <OurServices></OurServices>
         }
 
       ]

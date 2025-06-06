@@ -1,5 +1,13 @@
 import React from "react";
-import { FaFacebookF, FaLinkedinIn, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import logo from "../assets/BangladeshiIT.jpg";
 
 export default function Footer() {
   return (
@@ -8,26 +16,29 @@ export default function Footer() {
         {/* Logo and Brand Info */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img
-              src="../../src/assets/BangladeshiIT.jpg"  
-              alt="BangladeshiIT Logo"
-              className="h-10 w-auto"
-            />
+            <img src={logo} alt="BangladeshiIT Logo" className="h-10 w-auto" />
             <h1 className="text-2xl font-bold flex items-center">
-            <span className="flex">
-              <span className="text-green-600">Bangla</span>
-              <span className="text-red-600">deshi</span>
-            </span>
-            <span className="text-green-600 ml-3">IT</span>
-          </h1>
+              <span className="flex">
+                <span className="text-green-600">Bangla</span>
+                <span className="text-red-600">deshi</span>
+              </span>
+              <span className="text-green-600 ml-3">IT</span>
+            </h1>
           </div>
           <p className="text-gray-400">
-            Empowering businesses with modern digital solutions. We specialize in web development, branding, and marketing services.
+            Empowering businesses with modern digital solutions. We specialize
+            in web development, branding, and marketing services.
           </p>
           <div className="flex gap-4 mt-4">
-            <a href="#" aria-label="Facebook"><FaFacebookF className="hover:text-orange-500" /></a>
-            <a href="#" aria-label="LinkedIn"><FaLinkedinIn className="hover:text-orange-500" /></a>
-            <a href="mailto:info@bangladeshiit.com" aria-label="Email"><FaEnvelope className="hover:text-orange-500" /></a>
+            <a href="#" aria-label="Facebook">
+              <FaFacebookF className="hover:text-orange-500" />
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <FaLinkedinIn className="hover:text-orange-500" />
+            </a>
+            <a href="mailto:info@bangladeshiit.com" aria-label="Email">
+              <FaEnvelope className="hover:text-orange-500" />
+            </a>
           </div>
         </div>
 
@@ -35,23 +46,26 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="#" className="hover:text-orange-500">Home</a></li>
-            <li><a href="#about" className="hover:text-orange-500">About Us</a></li>
-            <li><a href="#services" className="hover:text-orange-500">Services</a></li>
-            <li><a href="#blogs" className="hover:text-orange-500">Blogs</a></li>
-            <li><a href="#contact" className="hover:text-orange-500">Contact</a></li>
+            <li><Link to="/" className="hover:text-orange-500">Home</Link></li>
+            <li><Link to="/about" className="hover:text-orange-500">About Us</Link></li>
+            <li><Link to="/services" className="hover:text-orange-500">Services</Link></li>
+            <li><Link to="/blogs" className="hover:text-orange-500">Blogs</Link></li>
+            <li><Link to="/contact" className="hover:text-orange-500">Contact</Link></li>
           </ul>
         </div>
 
         {/* Services */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
+          <h3 className="text-lg font-semibold mb-4 text-white">Our Services</h3>
           <ul className="space-y-2 text-gray-400">
-            <li>Web Development</li>
-            <li>UI/UX Design</li>
-            <li>SEO Optimization</li>
-            <li>Branding & Identity</li>
-            <li>Social Media Marketing</li>
+            <li><Link to="/services/ecommerce" className="hover:text-orange-500">E-Commerce Solutions</Link></li>
+            <li><Link to="/services/web-development" className="hover:text-orange-500">Web Development</Link></li>
+            <li><Link to="/services/apps-development" className="hover:text-orange-500">Apps Development</Link></li>
+            <li><Link to="/services/digital-marketing" className="hover:text-orange-500">Digital Marketing</Link></li>
+            <li><Link to="/services/graphic-design" className="hover:text-orange-500">Graphics Design</Link></li>
+            <li><Link to="/services/social-media-marketing" className="hover:text-orange-500">Social Media Marketing</Link></li>
+            <li><Link to="/services/seo" className="hover:text-orange-500">SEO Content Writing</Link></li>
+            <li><Link to="/services/consulting" className="hover:text-orange-500">Consulting</Link></li>
           </ul>
         </div>
 
@@ -63,10 +77,11 @@ export default function Footer() {
               <FaPhone /> +8801621741799
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope /> Info@bangladeshiit.com
+              <FaEnvelope /> info@bangladeshiit.com
             </li>
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt /> House#35, Road#15, Sector#14, Uttara, Dhaka-1230, Bangladesh
+              <FaMapMarkerAlt />
+              House#35, Road#15, Sector#14, Uttara, Dhaka-1230, Bangladesh
             </li>
           </ul>
         </div>
